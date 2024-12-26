@@ -1,0 +1,30 @@
+allprojects {
+    repositories {
+        maven {url 'https://maven.aliyun.com/repository/public/'}
+        google()
+        mavenCentral()
+    }
+}
+buildscript {
+    repositories {
+        maven {url 'https://maven.aliyun.com/repository/public/'}
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.7.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.20"
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
