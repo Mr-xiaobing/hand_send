@@ -9,7 +9,7 @@
 
 使用方法：https://www.bilibili.com/video/BV1SSkmYAEhb/
 
-原理：
+原理：https://www.bilibili.com/video/BV1U4CrYmEXG/
 
 # hand_mediapipe_plugin
 
